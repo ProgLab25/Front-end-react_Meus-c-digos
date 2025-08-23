@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Transições Suaves - CSS</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitulo {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .exemplos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .exemplo-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .exemplo-card h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .exemplo-card:hover h3 {
+            transform: scale(1.1);
+        
+        }
+        
+        /* Botão com mudança de cor */
+        .btn-cor {
+            background: #3498db;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-cor:hover {
+            background: #e74c3c;
+        }
+        
+        /* Botão com escala */
+        .btn-escala {
+            background: #2ecc71;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn-escala:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Botão com sombra */
+        .btn-sombra {
+            background: #f39c12;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: box-shadow 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .btn-sombra:hover {
+            box-shadow: 0 8px 25px rgba(243, 156, 18, 0.4);
+        }
+        /* Botão que flutua */
+        .btn-float{
+            background: #9b59b6;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .btn-float:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .btn-colorido {
+            background: #e67e22;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        .btn-colorido:hover {
+            color: #28271e;
+            background: #f7d9c0;
+        }
+        
+        /* Texto com mudança de cor */
+        .texto-hover {
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+            cursor: pointer;
+            margin: 15px 0;
+        }
+        
+        .texto-hover:hover {
+            color: #ffd700;
+        }
+        
+        /* Imagem com zoom */
+        .img-zoom {
+            width: 100px;
+            height: 100px;
+            background: #e74c3c;
+            border-radius: 50%;
+            margin: 20px auto;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+        }
+        
+        .img-zoom:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+        
+        /* Barra de progresso animada */
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ffd700, #ff6b6b);
+            width: 30%;
+            transition: width 0.5s ease;
+            border-radius: 5px;
+        }
+        
+        .progress-bar:hover .progress-fill {
+            width: 100%;
+        }
+        
+        .codigo-exemplo {
+            background: rgba(0,0,0,0.3);
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #ffd700;
+            margin: 15px 0;
+            text-align: left;
+        }
+        
+        .dica-importante {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid #ffd700;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fa-solid fa-wand-magic-sparkles"></i> Transições Suaves</h1>
+        <p class="subtitulo">Adicione movimento e interatividade ao seu site</p>
+        
+        <div class="exemplos-grid">
+            <div class="exemplo-card">
+                <h3>Mudança de Cor</h3>
+                <p>Passe o mouse no botão:</p>
+                <button class="btn-cor">Ação!</button>
+                <div class="codigo-exemplo">
+transition: background-color 0.3s ease;
+                </div>
+            </div>
+            
+            <div class="exemplo-card">
+                <h3> Escala (Scale)</h3>
+                <p>Botão que cresce ao passar o mouse:</p>
+                <button class="btn-escala">Ação!</button>
+                <div class="codigo-exemplo">
+transition: transform 0.3s ease;
+transform: scale(1.1);
+                </div>
+            </div>
+            
+            <div class="exemplo-card">
+                <h3> Sombra Dinâmica</h3>
+                <p>Sombra que se intensifica:</p>
+                <button class="btn-sombra">Ação!</button>
+                <div class="codigo-exemplo">
+transition: box-shadow 0.3s ease;
+                </div>
+            </div>
+            
+            <div class="exemplo-card">
+                <h3> Efeito flutuação</h3>
+                <p>O botão flutua para cima</p>
+                <button class="btn-float">Ação!</button>
+                <div class="codigo-exemplo">
+transition: transform 0.3s ease;
+transform: translateY(-5px);
+                </div>
+            </div>
+            
+            <div class="exemplo-card">
+                <h3> Efeito colorido</h3>
+                <p></p> O botão muda de cor</p>
+                <button class="btn-colorido">Ação!</button>
+                <div class="codigo-exemplo">
+transition: color 0.3s ease;
+                </div>
+            </div>
+            
+            <div class="exemplo-card">
+                <h3>Zoom + Rotação</h3>
+                <p>Círculo que cresce e gira:</p>
+                <div class="img-zoom"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <div class="codigo-exemplo">
+transition: transform 0.3s ease;
+transform: scale(1.2) rotate(10deg);
+                </div>
+            </div>
+        </div>
+        
+        <div class="exemplo-card" style="grid-column: 1 / -1;">
+            <h3> Barra de Progresso Animada</h3>
+            <p>Passe o mouse na barra:</p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="codigo-exemplo">
+transition: width 0.5s ease;
+            </div>
+        </div>
+        
+        <div class="dica-importante">
+            <h3>Dicas Importantes:</h3>
+            <ul>
+                <li><strong>Duração:</strong> Use 0.3s para efeitos rápidos, 0.5s para mais suaves</li>
+                <li><strong>Easing:</strong> <code>ease</code> é o mais natural, <code>ease-in-out</code> é mais suave</li>
+                <li><strong>Propriedades:</strong> Você pode animar cor, tamanho, posição, opacidade, sombra...</li>
+                <li><strong>Performance:</strong> Prefira animar <code>transform</code> e <code>opacity</code></li>
+            </ul>
+        </div>
+        
+        <div class="exemplo-card" style="grid-column: 1 / -1; background: rgba(46, 204, 113, 0.2);">
+            <h3>🎯 Atividade Prática</h3>
+            <p>Escolha um efeito e aplique em um elemento do seu site!</p>
+            <div class="codigo-exemplo">
+/* Exemplo básico para começar */
+.meu-botao {
+    transition: all 0.3s ease;
+}
+
+.meu-botao:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

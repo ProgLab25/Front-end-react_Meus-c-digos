@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Exemplo Flexbox</title>
+         <style>
+        body{
+            font-family: Arial, sans-serif;
+            color: navy;
+        }
+        .conteiner{
+            display: flex;
+            justify-content: space-around;
+           flex-direction: row;
+            
+        }
+        .item {
+            text-align: center;
+            margin: 3px;
+            background-color: rgb(184, 38, 111);
+            
+        }
+        .txt-destaque h1{
+        color: aquamarine;
+        text-shadow: 2px 2px 4px rgb(22, 40, 201);
+        transition: all 0.3s ease;
+        font-size: 50px;
+        }
+         </style>
+    </head>
+    <body>
+    <h1>Exemplo Flexbox</h1>
+    <!--div que vai o display flex-->
+    <div class="container">
+    <div class="item">
+        <img src="https://thumbs.dreamstime.com/b/borboleta-em-uma-flor-99051337.jpg"width="50%"heigth="20%">
+     </div>
+    <div class="item">
+     <img src="https://sensing.konicaminolta.us/wp-content/uploads/why-flowers-have-color.png"width="50%"heigth="20%">
+    </div>
+<div class="item">
+ <img src="https://images.unsplash.com/photo-1597201278257-3687be27d954?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHx8"width="70%"heigth="40%">
+</div>
+</html>
+    </body>

@@ -1,0 +1,30 @@
+ body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #43dbcf 0%, #472d62 100%);
+            min-height: 100vh;
+            color: rgb(240, 244, 247);
+        }
+button{
+    background: linear-gradient(135deg, #e1eb60 0%, #ddae12 100%);
+    
+            color: rgb(0, 201, 184);
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.3s ease;
+}  
+.cartao {
+            background: rgb(145, 99, 230);
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }      
+
+   
+      

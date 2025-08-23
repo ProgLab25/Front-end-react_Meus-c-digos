@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Antes/Depois - CSS</title>
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h2{
+            text-align: center; margin-bottom: 20px;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .exemplo {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .titulo-secao {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        
+        
+        /* Estilos para o "ANTES" */
+        .antes {
+            border: 2px solid #ccc;
+        }
+        
+        .antes h1 {
+            color: black;
+            font-size: 18px;
+            margin: 0 0 10px 0;
+        }
+        
+        .antes p {
+            color: black;
+            font-size: 14px;
+            line-height: 1.2;
+            margin: 5px 0;
+        }
+        
+        .antes button {
+            background: white;
+            border: 1px solid black;
+            padding: 5px 10px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        
+        /* Estilos para o "DEPOIS" */
+        .depois {
+            border: 2px solid #4CAF50;
+        }
+        
+        .depois h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin: 0 0 20px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 10%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .depois p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        .depois button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: block;
+            margin: 20px auto;
+        }
+        
+        .depois button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .destaque {
+            background: #e8f5e8;
+            padding: 15px;
+            border-left: 4px solid #4CAF50;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .destaque li {
+            margin: 10px 0;
+            font-size: 16px;
+            list-style-type: none; /* Remove o bullet */
+        }
+        .destaque li::before {
+               
+            content: '\f00c'; /* icone check*/
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            /* Estilização extra (opcional) */
+            margin-right: 10px;      
+            color: #4f9b60;        
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo-secao">O Poder do CSS: Antes vs Depois</h1>
+    
+    <div class="container">
+        <div class="exemplo antes">
+            <h2 style="color: #d32f2f;"><i class="fa-regular fa-circle-xmark"></i> ANTES (Sem CSS)</h2>
+            <h1>Meu Site</h1>
+            <p>Bem-vindo ao meu site. Este é um parágrafo de exemplo.</p>
+            <p>Aqui temos mais conteúdo interessante sobre o que fazemos.</p>
+            <button>Clique aqui</button>
+        </div>
+        
+        <div class="exemplo depois">
+            <h2 style="color: #4CAF50;"><i class="fa-regular fa-circle-check"></i> DEPOIS (Com CSS)</h2>
+            <h1>Meu Site</h1>
+            <p>Bem-vindo ao meu site. Este é um parágrafo de exemplo.</p>
+            <p>Aqui temos mais conteúdo interessante sobre o que fazemos.</p>
+            <button>Clique aqui</button>
+        </div>
+    </div>
+    
+    <div class="destaque">
+        <h3> 
+            <i class="fa-solid fa-lightbulb" style="color: #FD7E14;"></i>
+            O que mudou?
+        </h3>
+        <ul>
+            <li><strong>Cores e gradientes:</strong> Títulos com gradiente colorido</li>
+            <li><strong>Espaçamento:</strong> Melhor organização visual</li>
+            <li><strong>Botões:</strong> Design moderno com efeitos hover</li>
+            <li><strong>Tipografia:</strong> Fontes maiores e melhor legibilidade</li>
+            <li><strong>Layout:</strong> Centralização e sombras para profundidade</li>
+        </ul>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Landing Page</title>
+    <!-- 
+    🎯 MISSÃO: Estilizar esta página para que pareça uma landing page real!
+    
+    ✅ O que você precisa fazer:
+    1. Adicionar cor de fundo interessante (gradiente?)
+    2. Centralizar o texto
+    3. Estilizar o botão com hover
+    4. Melhorar a tipografia
+    5. Adicionar espaçamentos
+    
+    💡 DESAFIO EXTRA: Quem já tem prática pode criar 2 seções (ex: "Sobre mim" e "Contato")
+    -->
+    <style>
+        /* 
+        🚀 COLE SEU CSS AQUI!
+        Dica: Comece com body { } para definir o fundo e fonte
+        */
+        
+    </style>
+</head>
+<body>
+    <!-- CABEÇALHO -->
+    <header>
+        <h1>Meu Site Incrível</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- SEÇÃO PRINCIPAL -->
+    <main>
+        <section id="home">
+            <h2>Bem-vindo ao Futuro!</h2>
+            <p>
+                Descubra soluções inovadoras que vão transformar sua vida. 
+                Nossa tecnologia revolucionária está aqui para fazer a diferença.
+            </p>
+            <img src="https://via.placeholder.com/400x300/667eea/ffffff?text=Imagem+Incrível" alt="Imagem principal">
+            <br><br>
+            <button id="botao-principal">Comece Agora!</button>
+        </section>
+    </main>
+
+    <!-- SEÇÃO EXTRA (OPCIONAL) -->
+    <section id="sobre" style="display: none;">
+        <h2>Sobre Nós</h2>
+        <p>
+            Somos uma empresa inovadora focada em criar experiências digitais únicas.
+            Nossa missão é simplificar o complexo e tornar a tecnologia acessível para todos.
+        </p>
+    </section>
+
+    <!-- SEÇÃO CONTATO (OPCIONAL) -->
+    <section id="contato" style="display: none;">
+        <h2>Entre em Contato</h2>
+        <p>Pronto para começar? Fale conosco!</p>
+        <p>📧 contato@meusite.com</p>
+        <p>📱 (11) 99999-9999</p>
+    </section>
+
+    <script>
+        // Pequeno script para mostrar as seções extras
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('nav a');
+            const sections = document.querySelectorAll('section');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    
+                    // Esconder todas as seções
+                    sections.forEach(section => {
+                        section.style.display = 'none';
+                    });
+                    
+                    // Mostrar a seção clicada
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.style.display = 'block';
+                    }
+                });
+            });
+            
+            // Mostrar a seção home por padrão
+            document.getElementById('home').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
+

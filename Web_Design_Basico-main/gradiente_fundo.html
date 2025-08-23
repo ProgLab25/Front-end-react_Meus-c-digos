@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Gradientes de Fundo - CSS</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #37437b 0%, #472d62 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .exemplos-gradiente {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .exemplo-card {
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .exemplo-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .gradiente-1 {
+            background: linear-gradient(45deg, #ff6b6b, #a1b823);
+        }
+        
+        .gradiente-2 {
+            background: linear-gradient(75deg, #ac025f, #42213D);
+        }
+        
+        .gradiente-3 {
+            background: linear-gradient(90deg, #a8edea, #bd738b);
+            color: #333;
+        }
+        
+        .gradiente-4 {
+            background: linear-gradient(180deg, hsl(66, 98%, 64%), #fa8ed8);
+            color: #333;
+        }
+        
+        .gradiente-5 {
+            background: linear-gradient(45deg, #98f1f1, #d580fd);
+        }
+        
+        .gradiente-6 {
+            background: linear-gradient(135deg, #b35a9f, #fee140);
+        }
+        
+        .codigo-exemplo {
+            background: rgba(0,0,0,0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: left;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        
+        .codigo-exemplo code {
+            color: #ffd700;
+        }
+        
+        .dica {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fa-solid fa-palette"></i> Gradientes de Fundo</h1>
+        <p style="font-size: 1.2em; margin-bottom: 40px;">
+            Transforme seu site com fundos coloridos e modernos!
+        </p>
+        
+        <div class="exemplos-gradiente">
+            <div class="exemplo-card gradiente-1">
+                Gradiente Quente<br>
+                <small>45deg, #ff6b6b, #feca57</small>
+            </div>
+            <div class="exemplo-card gradiente-2">
+                Gradiente Roxo<br>
+                <small>135deg, #667eea, #764ba2</small>
+            </div>
+            <div class="exemplo-card gradiente-3">
+                Gradiente Suave<br>
+                <small>90deg, #a8edea, #fed6e3</small>
+            </div>
+            <div class="exemplo-card gradiente-4">
+                Gradiente Rosa<br>
+                <small>180deg, #ff9a9e, #fecfef</small>
+            </div>
+            <div class="exemplo-card gradiente-5">
+                Gradiente Neon<br>
+                <small>45deg, #21d4fd, #b721ff</small>
+            </div>
+            <div class="exemplo-card gradiente-6">
+                Gradiente Tropical<br>
+                <small>135deg, #fa709a, #fee140</small>
+            </div>
+        </div>
+        
+        <div class="codigo-exemplo">
+            <h3><i class="fa-solid fa-laptop"></i> Como usar:</h3>
+            <code>
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            </code>
+        </div>
+        
+        <div class="dica">
+            <h3><i class="fa-solid fa-lightbulb" style="color: #fdc314;"></i> Dica Pro:</h3>
+            <p>
+                Experimente diferentes ângulos (45, 90, 135) e cores para criar efeitos únicos!
+                Use ferramentas como <strong>uiGradients</strong> ou <strong>CSS Gradient</strong> para inspiração.
+            </p>
+        </div>
+        
+        <div class="codigo-exemplo">
+            <h3><i class="fa-solid fa-bullseye"></i> Atividade:</h3>
+            <p>Escolha um dos gradientes acima e aplique no fundo do seu site!</p>
+            <code>
+/* Cole este código no seu CSS */
+body {
+    background: linear-gradient(135deg, #sua-cor-1, #sua-cor-2);
+    min-height: 100vh;
+}
+            </code>
+        </div>
+    </div>
+</body>
+</html>
+
