@@ -1,0 +1,15 @@
+h1{
+    background-color:darkolivegreen;
+    color:rgb(218, 216, 121);
+    border-color: black;
+    border-radius: 5px;
+    border-style:groove;
+}
+
+.tabuada{
+    background-color: #2a2;
+    color: #fcf5f5;
+    padding: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
