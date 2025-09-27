@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Minha Galeria</h2>
+    <div id='galeria'></div>
+
+    <script>
+   let imagens = [
+    "imagem1.jpg",
+    "imagem2.jpg",
+    "imagem3.jpg",
+   ];
+
+   let galeriaDiv = document.getElementById('galeria');
+
+    for (let i = 0; i  <imagens.length; i++){
+        let img = document.createElement('img');
+        img.src = imagens[i];
+        img.style.margin = '10px';
+        galeriaDiv.appendChild(img);
+    }
+    </script>
+</body>
+</html>
