@@ -1,127 +1,310 @@
-:root{
-    --primary-color: #610646;
-    --secondary-color: #d3c8f1;
-    --attention-color: #2a2a03;
-    --font-color: #333;
-    --gradiente-azul:linear-gradient(45deg,#85408d ,#78b65c );
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swa');
+
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+}
+
+
+body{
+
+
+	font-family: open sans, arial;
+	background: linear-gradient(to left, #FFFF87, #5ED7DB);
+	display: flex;
+	justify-content: flex-end;
+	height: 100vh;
 
 
 }
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--secondary-color);
+
+
+form h3{
+
+	font-size: 17px;
+	margin-bottom: 30px;
+	padding-left: 40px;
+	
+
 }
-.menu-bar{
-    background-image: var(--gradiente-azul);
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 30px;
-    align-items: center;
-    & h2{
-        color: var(--secondary-color);
-    }
+
+.formulario{
+
+	background-color: #ffffff;
+	width: 500px;
+	height: 100vh;
+	box-shadow: 50px 50px 80px white;
+	
+
 }
-.menu{
-    justify-content: space-around;
-    & ul{
-        list-style: none;
-        display: flex;
-        gap: 20px;
-        & a{
-            text-decoration: none;
-            color: var(--secondary-color);
-            font-size: 20px;
-            font-weight: bold;
-            border: solid 2px var(--secondary-color);
-            padding: 10px;
-            border-radius: 30px;
-            box-shadow: 1px 2px 10px #cc070733;
-            transition: all 0.3s ease;
-            &:hover{
-                background-color: var(--secondary-color);
-                color: var(--primary-color);;
-                box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
-            }
-        }
-    }
+
+
+.fa-user{
+
+	position: absolute;
+	margin-top: 70px;
+	padding-left: 8px;
+	color: #878787;
 }
-.biografia{
-    text-align: center;
-    margin: 0 auto;
-    padding: 10px;
-    & h1{
-        color: var(--primary-color);
-        font-size: 40px;
-        margin-bottom: 0;
-    }
-    & p{
-        color: var(--attention-color)
-    }   
+
+
+
+.fa-key{
+
+	position: absolute;
+	margin-top: 25px;
+	padding-left: 8px;
+	color: #878787;
 }
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0 150px;
-    & h2{
-       text-align: start;
-        padding: 5px 50px;
-    }
-    & p{
-        padding: 5px 50px;
-        text-align: justify;
-    }
-    & img{
-        height: 20vw;
-        border-radius: 50%;
-        box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
-    }
+
+
+
+form{
+	display: flex;
+	width: 400px;
+	height: 100vh;
+	margin: 0 auto;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 30px;
+
+
 }
- .cartao {
-            background: rgb(144, 204, 147);
-            border-radius: 15px;
-            padding: 30px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            & h3{
-                color: rgb(160, 48, 67);
-            }
-        }
-        
-        /* Diferentes tipos de sombra */
-        .sombra-suave {
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-          
-        }
- .cards{
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
-    padding: 0 50px;
- }   
-.contato-form{
-     
-    margin:0 auto ;
-    padding: 20px;
-    border:solid 1px var(--primary-color);
-    width: 60%;
-    text-align:center;
-    border-radius: 10px;
-    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
- }    
-   
-   & form{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 70%;
-    justify-content:center ;
-    margin: 10px auto;
-    & input{
-        border:solid 1px  var(--input-border-color);
-        padding: 10px;
-        border-radius: 10px;
-    }
-   }
+
+
+
+.redesocialtext{
+	display: flex;
+}
+
+.fa-fw{
+	margin-right: 5px;
+}
+
+#entrarfacebook{
+	background-color: #2b398a;
+	padding: 5px 5px;
+	font-size: 11px;
+	color: white;
+	cursor: pointer;
+	font-weight: bold;
+	border-radius: 5px;
+
+}
+
+#entrartwitter{
+	background-color: #1068cc;
+	padding: 5px 5px;
+	font-size: 11px;
+	color: white;
+	margin-left: 10px;
+	cursor: pointer;
+	font-weight: bold;
+	letter-spacing: 0.50px;
+	border-radius: 5px;
+}
+
+
+#entrarfacebook:hover{
+	background-color: #218249;
+	
+}
+
+
+
+#entrartwitter:hover{
+	background-color: #218249 ;
+	
+}
+
+
+
+label{
+	font-size: 15px;
+	font-weight: bold;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	color: #9a9a9a;
+}
+
+
+input[type=password]{
+
+	background-color: transparent;
+	width: 260px;
+	padding: 8px 30px;
+	border: solid 1px #d0d0d0;
+	color: #656565;
+	font-family: open sans, arial;
+	font-weight: bold;
+}
+
+
+
+input[type=text]{
+
+	background-color: transparent;
+	width: 260px;
+	padding: 8px 30px;
+	border: solid 1px #d0d0d0;
+	color: #656565;
+	font-family: open sans, arial;
+	font-weight: bold;
+
+}
+
+
+input[type=checkbox]{
+
+		margin-top: 20px;
+}
+
+#conectado{
+
+	position: absolute;
+	margin-top: 69px;
+	margin-left: 18px;
+	font-size: 12px;
+}
+
+.bntlogin{
+	display: flex;
+	margin-top: 20px;
+}
+
+#bntlogin1{
+                                                                               
+	background: linear-gradient(to left, #1068cc, #2b398a);
+	width: 80px;
+	padding: 8px;
+	margin: 5px;
+	font-size: 12px;
+	color: rgb(white);
+	border: none;
+	cursor: pointer;
+	font-family: arial;
+	font-weight: bold;
+
+}
+
+#bntlogin2{
+
+	border: solid 1px #b6b7b9;
+	width: 80px;
+	padding: 8px;
+	margin: 5px;
+	font-size: 12px;
+	color: #424242;
+	font-weight: bold;
+	cursor: pointer;
+	background-color: transparent;
+	border-radius: 5px;
+
+
+}
+
+#esqueceu{
+	color: #797979;
+	font-size: 13px;
+	font-weight: bold;
+	margin-top: 20px;
+
+
+}
+
+#esqueceu:hover{
+	color: #4a4a4b;
+
+
+}
+
+/**** DIVISION */
+
+
+
+
+.caixatexto{
+	
+	max-width: 450px;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	flex-direction: column;
+	
+
+}
+
+
+.caixatexto h1{
+	color: rgb(29, 28, 28);	
+
+}
+
+.caixatexto small{
+
+	color: rgb(29, 28, 28);
+	font-size: 40px;
+}
+
+.caixatexto p{
+
+	font-size: 15px;
+	color: white;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+
+#bnt1{
+
+	padding: 10px 18px;
+	background-color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 5px;
+	color: #1068cc;
+	transition: 0.3s;
+	
+
+
+}
+
+
+
+#bnt1:hover{
+
+	background-color: #6e10ce;
+	color: white;
+	
+
+}
+
+
+#bnt2{
+
+	padding: 10px 18px;
+	background-color: transparent;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 5px;
+	border: solid 1px white;
+	color: white;
+	transition: 0.3s;
+}
+
+
+#bnt2:hover{
+
+	background-color: white;
+	color: #6e10ce;
+
+
+}
+
+
