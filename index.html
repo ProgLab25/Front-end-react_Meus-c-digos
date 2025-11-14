@@ -1,93 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
   <head>
     <meta charset="UTF-8">
-    <title>Landing Page Login</title>
+    <title>Responsive Registration Form</title>
     <link rel="stylesheet" href="./style.css">
 
   </head>
     
   <body>
-  <!doctype html>
-<html lang="pt-br">
-
-<head>
-<title>Login</title>
-<meta charset="utf-8">
-<meta name="description" content="">
-<meta name="keywords" content="">
-<meta name="author" content="TaylorShady">
-<link rel="shortcut icon" href="icone.aqui">
-<link rel="stylesheet" href="estilook.css">
-<link rel="stylesheet" href="css/all.min.css">
-</head>
-
-
-
-
-<body>
-
-<div class="caixatexto">
-
-<h1>JUVENTECH HUB<br><small>Rede Social dos jovens</small></h1>
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi dignissim, laoreet nunc at, fringilla augue. Nullam venenatis vulputate consectetur. Suspendisse nisl felis.</p>
-
-<div class="caixabnt">
-
-<a href="#"><button id="bnt1">Learn more</button></a>
-<a href="#"><button id="bnt2">About Us</button></a>
-
+  <div class="form_wrapper">
+  <div class="form_container">
+    <div class="title_container">
+      <h2>Formulário de inscrição responsivo</h2>
+    </div>
+    <div class="row clearfix">
+      <div class="">
+        <form>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+            <input type="email" name="email" placeholder="Email" required />
+          </div>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+            <input type="password" name="senha" placeholder="senha" required />
+          </div>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+            <input type="password" name="senha" placeholder="Digite uma nova senha" required />
+          </div>
+          <div class="row clearfix">
+            <div class="col_half">
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                <input type="text" name="nome" placeholder="Primeiro nome" />
+              </div>
+            </div>
+            <div class="col_half">
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                <input type="text" name="nome" placeholder="Sobrenome" required />
+              </div>
+            </div>
+          </div>
+            	<div class="input_field radio_option">
+              <input type="radio" name="radiogroup1" id="rd1">
+              <label for="rd1">Masculino</label>
+              <input type="radio" name="radiogroup1" id="rd2">
+              <label for="rd2">Feminino</label>
+              </div>
+              <div class="input_field select_option">
+                <select>
+                  <option>Selecione um país</option>
+                  <option>Opção 1</option>
+                  <option>Opção 2</option>
+                </select>
+                <div class="select_arrow"></div>
+              </div>
+            <div class="input_field checkbox_option">
+            	<input type="checkbox" id="cb1">
+    			<label for="cb1">Concordo com os termos e condições.</label>
+            </div>
+            <div class="input_field checkbox_option">
+            	<input type="checkbox" id="cb2">
+    			<label for="cb2">Quero receber a newsletter.</label>
+            </div>
+          <input class="button" type="submit" value="Cadastre-se" />
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-
-
-<div class="formulario">
-
-<form>
-
-<h3>Faça login com sua conta</h3>
-
-<div class="redesocialtext">
-
-<i class="far fa-user"></i>
-
-<p id="entrarfacebook"><i class="fab fa-fw fa-facebook-f"></i>Login com Facebook</p>
-<p id="entrartwitter"><i class="fab fa-fw fa-twitter"></i>Login com o Google</p>
-</div>	
-
-
-
-<label>Login</label>
-	<input type="text" name="email" placeholder="Digite seu Email" required>
-
-<i class="fas fa-key"></i>
-
-<label>Senha</label>
-	<input type="password" name="senha" placeholder="Digite sua Senha" required>	
-
-
-
-<div class="bntlogin">
-<button id="bntlogin1">Login In</button>
-<button id="bntlogin2">Criar uma conta</button>
-</div>
-
-
-<a id="esqueceu" href="#">Esqueceu sua senha? Clique aqui</a>
-
-</form>	
-
-
-</div>	
-
-
-
-
-</body>
-
-</html>
-    
+<p class="credit">Developed by <a href="http://www.designtheway.com" target="_blank">Design the way</a></p>
+    <script src='https://use.fontawesome.com/4ecc3dbb0b.js'></script>
   </body>
   
 </html>
